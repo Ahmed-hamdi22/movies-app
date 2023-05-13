@@ -1,26 +1,25 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Movie-Watchlist/Header'
-import Watched from './components/Movie-Watchlist/Watched'
-import Watchlist from './components/Movie-Watchlist/Watchlist'
-import Add from './components/Movie-Watchlist/Add'
-import GlobalProvider from './components/Movie-Watchlist/context/GlobalState'
-import './components/Movie-Watchlist/App.css'
+import logo from './logo.svg';
+import './App.css';
 
-
-const App = () => {
+function App() {
   return (
-    <GlobalProvider>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Watchlist />} />
-          <Route path='/watched' element={<Watched />} />
-          <Route path='/add' element={<Add />} />
-        </Routes>
-      </Router>
-    </GlobalProvider>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
